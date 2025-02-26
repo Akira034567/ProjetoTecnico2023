@@ -2,7 +2,7 @@
 # TDS-PImod3
 Repositório para o projeto integrador módulo 3, Senac EAD Técnico em Desenvolvimento de sistemas
 
-Status do projeto: O projeto está em etapa de desenvolvimento, em que as telas em html (view) estão sendo projetadas e construídas.
+Status do projeto: O projeto foi concluído e já está disponível para uso, se integrando a um banco de dados (que está sendo rodado localmente).
 
 Tecnologias que serão aplicadas: As tecnologias aplicadas a esse projeto são: a contrução de um projeto web em modelo MVC; conecção web com banco de dados (em SQL); interação entre front-end e back-end; solicitações POST, GET, PUT e DELETE; utilização de cookies em sites web; interação com bibliotecas java e spring. 
 
