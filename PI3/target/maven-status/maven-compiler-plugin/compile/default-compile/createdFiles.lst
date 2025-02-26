@@ -1,0 +1,15 @@
+com\atividade3\PI3\service\LembreteService.class
+com\atividade3\PI3\repository\MedicoRepository.class
+com\atividade3\PI3\repository\PacienteRepository.class
+com\atividade3\PI3\repository\LembreteRepository.class
+com\atividade3\PI3\service\PacienteService.class
+com\atividade3\PI3\service\MedicoService.class
+com\atividade3\PI3\Controller\MedicoController.class
+com\atividade3\PI3\Model\Medico.class
+com\atividade3\PI3\Model\Paciente.class
+com\atividade3\PI3\Controller\PacienteController.class
+com\atividade3\PI3\PI3Application.class
+com\atividade3\PI3\exception\ResourceNotFoundException.class
+com\atividade3\PI3\Controller\LembreteController.class
+com\atividade3\PI3\exception\ValidationHandler.class
+com\atividade3\PI3\Model\Lembrete.class

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+
+<head>
+           
+    <meta charset="utf-8">
+            <title>Lembretes</title>
+           
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/css.css" media="screen" />
+       
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="margin-top: 5%;">Lembretes:</h1>
+
+        <table style="text-align: center; margin-left: 32%;">
+            <thead>
+                <tr>
+                    <th style="font-size: larger;">ID</th>
+                    <th style="font-size: larger;">Lembrete</th>
+                    <th style="font-size: larger;">Data</th>
+                    <th style="font-size: larger;">Realizado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="lembrete : ${lembretes}">
+                    <td th:text="${lembrete.id}"></td>
+                    <td th:text="${lembrete.descricao}"></td>
+                    <td th:text="${lembrete.data_Hora}"></td>
+                    <td>
+                        <form  name="formLembreteRealizado" action="#" th:action="@{/atualizarLembrete}" th:object="${lembretea}" method="POST">
+                        <input name="realizado" type="checkbox" onChange="submit();" value="" th:value="${lembrete.realizado}" th:checked="${lembrete.realizado}"/>
+                        <input id="id" name="id" type="hidden" th:value="${lembrete.id}">
+                        <input id="descricao" name="descricao" type="hidden" th:value="${lembrete.descricao}" />
+                        <input id="data_Hora" name="data_Hora" type="hidden" th:value="${lembrete.data_Hora}" />
+                        <input id="paciente" name="paciente" type="hidden" th:field="*{paciente}" th:value="${lembrete.paciente}" /> 
+                        </form>
+                    </td>
+                </tr>
+
+
+            </tbody>
+        </table>
+
+        <a th:href="@{/login}"><button class="btn btn-danger mt-4" style="text-align: center; margin-left: 32%;">Sair</button></a>
+
+    </div>
+</body>
+
+</html>
