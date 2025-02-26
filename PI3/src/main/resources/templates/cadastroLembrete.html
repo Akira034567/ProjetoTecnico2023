@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="utf-8"> 
+        <title>Cadastro de Lembretes</title> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="/css/css.css" media="screen" />
+    </head> 
+    <body> 
+        <div class="container"> 
+            <h1 style="margin-top: 5%;">Cadastro de Lembretes</h1>
+            <hr>
+            <form action="#" th:action="@{/salvarLembrete/{pacienteId}(pacienteId = ${paciente.id})}" th:object="${lembrete}" method="POST" style="width: 940px; margin: 40px auto;">
+
+                <input type="text" id="descricao" th:field="*{descricao}" placeholder="Descrição" class="form-control mt-4 col-4" style="margin-left: 32%;"/>
+                <span class="text-danger" th:if="${#fields.hasErrors('descricao')}" th:errors="*{descricao}"></span>
+
+                <input type="text" id="dataHora" th:field="*{data_Hora}" placeholder="Data e Hora" class="form-control mt-4 col-4" style="margin-left: 32%;"/>
+                <span class="text-danger" th:if="${#fields.hasErrors('data_Hora')}" th:errors="*{data_Hora}"></span>
+
+            <button type="button" id="limparForm" class="btn btn-danger mt-4" style="text-align: center; margin-left: 32%;">Limpar</button>
+                <button type="submit" class="btn btn-info mt-4" style="text-align: center; margin-left: 10%;">Cadastrar</button>
+            </form>
+        </div> 
+    
+
+        <script src="/js/jquery.js"></script>
+            <script>
+                $(document).ready(function () {
+                    $('#limparForm').click(function () {
+                        
+                        $("#descricao").val("");
+                        $("#dataHora").val("");
+
+                    });
+                });
+            </script>
+        </body>
+</html>
